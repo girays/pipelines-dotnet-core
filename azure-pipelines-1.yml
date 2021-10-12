@@ -20,9 +20,11 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<Azure service connection>'
-    appType: 'webAppLinux'
-    appName: '<Name of web app>'
+    azureSubscription: 'Kullandıkça Öde (Giray Subscription) (f981ee18-2e02-4dbb-83de-9dad45b3ef06)'
+    appType: 'webApp'
+    appName: 'my-app-dotnet-wintest1290'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
